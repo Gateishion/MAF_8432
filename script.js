@@ -127,7 +127,7 @@ function displayScore() {
 
   // Create restart button
   var restartButton = document.createElement('button');
-  restartButton.textContent = 'Another round, ' + userName + ' ?';
+  restartButton.textContent = 'Jugar de nuevo, ' + userName + ' ?';
   restartButton.className = 'btn btn-primary';
   restartButton.addEventListener('click', restartGame);
   scoreArea.appendChild(restartButton);
@@ -135,7 +135,7 @@ function displayScore() {
 
   // Create new game button
   var newGameButton = document.createElement('button');
-  newGameButton.textContent = 'New Game';
+  newGameButton.textContent = 'Nuevo Juego';
   newGameButton.className = 'btn btn-secondary';
   newGameButton.addEventListener('click', function() {
     location.reload(); // Refresh the page to start a new game

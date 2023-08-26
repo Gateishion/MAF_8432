@@ -3,19 +3,6 @@ var eq1 = '$$(x_{\\alpha})_{\\alpha\\in\\ I}$$';
 var eq2 = '$$x_{\\alpha} \\in\\ X$$';
 var eq3 = '$$\\alpha\\ \\in\\ I$$';
 var quizQuestions = [
-  {
-    // question: "Definimos una familia de elementos de un conjunto X como todos los elementos tales que: (X_α)_(α ∈ I) con x_α ∈ X la imagen de α ∈ I. En donde I mapea elementos a X. Esto lo vuelve diferente a simplemente tomar un subconjunto de X, dado que",
-    question: "Definimos una familia de elementos de un conjunto X como todos los elementos tales que: "+eq1+" con "+eq2+" la imagen de "+eq3+" En donde I mapea elementos a X. Esto lo vuelve diferente a simplemente tomar un subconjunto de X, dado que",
-    options: [
-        "En las familias no está bien definida la unión e intersección de conjuntos",
-        "Podemos realizar operaciones de unión e intersección de familias",
-        "Bajo el mapeo de I con X, se preservan estructuras algebraicas.",
-        "Pensar en subconjuntos y familias es equivalente."
-    ],
-    correctAnswer: 2,
-    feedback2: "La importancia de usar familias es que se preserven las estructuras de cada subconjunto.",
-    feedback: "El conjunto numerable I es el centro de esta definición ¿para qué definimos estos mapeos entre conjuntos?"
-  },
     {
       question: "La expresión {x | x ∈ A o x ∈ B} corresponde al conjunto:",
       //question:  eq2,
@@ -50,16 +37,19 @@ var quizQuestions = [
       feedback2: "Esta es una expresión equivalente para diferencias de conjuntos de las Leyes de Morgan.",
       feedback: "En clase mencionamos que existe una expresión equivalente a la unión e intersección de conjuntos complemento si se trabaja con diferencias de conjuntos, de hecho son dos leyes, las leyes de..."
     },
-    
-
-
-
-
-
-
-
-
-
+    {
+      // question: "Definimos una familia de elementos de un conjunto X como todos los elementos tales que: (X_α)_(α ∈ I) con x_α ∈ X la imagen de α ∈ I. En donde I mapea elementos a X. Esto lo vuelve diferente a simplemente tomar un subconjunto de X, dado que",
+      question: "Definimos una familia de elementos de un conjunto X como todos los elementos tales que: "+eq1+" con "+eq2+" la imagen de "+eq3+" En donde I mapea elementos a X. Esto lo vuelve diferente a simplemente tomar un subconjunto de X, dado que",
+      options: [
+          "En las familias no está bien definida la unión e intersección de conjuntos",
+          "Podemos realizar operaciones de unión e intersección de familias",
+          "Bajo el mapeo de I con X, se preservan estructuras algebraicas.",
+          "Pensar en subconjuntos y familias es equivalente."
+      ],
+      correctAnswer: 2,
+      feedback2: "La importancia de usar familias es que se preserven las estructuras de cada subconjunto.",
+      feedback: "El conjunto numerable I es el centro de esta definición ¿para qué definimos estos mapeos entre conjuntos?"
+    },
   {
     question: "Al definir mapeos o funciones, se considera al conjunto A como el dominio del mapeo, que bajo la aplicación se denota T: D(T) -> Y, así como al rango R(T) como el conjunto de todas las imágenes. ¿Cómo se llama el conjunto de todas las x en D(T) tales que Tx = y0?",
     options: [
