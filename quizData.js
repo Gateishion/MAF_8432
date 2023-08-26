@@ -2,6 +2,11 @@
 var eq1 = '$$(x_{\\alpha})_{\\alpha\\in\\ I}$$';
 var eq2 = '$$x_{\\alpha} \\in\\ X$$';
 var eq3 = '$$\\alpha\\ \\in\\ I$$';
+var eq4 = '$$T:X \\to\\ Y$$';
+var eq5 = '$$\\forall\\ x_{1}, x_{2} \\in\\ D(T)$$';
+var eq6 = '$$x_{1} \\neq\\ x_{2} \\implies\\ Tx_{1} \\neq\\ Tx_{2}$$';
+var eq7 = '$$\\tau\\ = \\{ U_i \\mid\\ i \\in\\ I \\} $$';
+
 var quizQuestions = [
     {
       question: "La expresión {x | x ∈ A o x ∈ B} corresponde al conjunto:",
@@ -63,7 +68,7 @@ var quizQuestions = [
     feedback: "Observa bien los subconjuntos definidos como el Dominio, Rango e imagen cuando hacemos un mapeo o función ¿hacia donde apunta el mapeo?"
 },
 {
-    question: "Se dice que un mapeo es de cierto tipo si al mapear D(T) sobre Y, es decir, R(T) = Y. ¿Cómo se denomina este tipo de mapeo?",
+    question: "Se dice que un mapeo "+eq4+" es  ______  si al mapear D(T) sobre Y, queda R(T) = Y. ¿Cómo se denomina este tipo de mapeo?",
     options: [
         "Función o mapeo biyectiva",
         "Función o mapeo uno-a-uno",
@@ -75,7 +80,19 @@ var quizQuestions = [
     feedback: "¡Tu sabes esta! en la definición está oculta la respuesta."
 },
 {
-  question: "Sea X un conjunto y τ = { Ui | i ∈ I } una colección de subconjuntos de X tal que contiene al vacío y X, es cerrada bajo la unión arbitraria de sus elementos y cerrada bajo la intersección finita de sus elementos. Entonces (X, τ) es un ... ",
+  question: "Se dice que un mapeo "+eq4+" es  ______  si "+eq5+" se cumple "+eq6+"",
+  options: [
+      "Función o mapeo biyectiva",
+      "Función o mapeo uno-a-uno",
+      "Función o mapeo suprayectiva",
+      "Función o mapeo sobreyectiva"
+  ],
+  correctAnswer: 1,
+  feedback2: "Aquí no podían fallar, nomamn.",
+  feedback: "¡Tu sabes esta! en la definición está oculta la respuesta."
+},
+{
+  question: "Sea X un conjunto y "+eq7+" una colección de subconjuntos de X tal que contiene al vacío y X, es cerrada bajo la unión arbitraria de sus elementos y cerrada bajo la intersección finita de sus elementos. Entonces (X, τ) es un ... ",
   options: [
       "Espacio Métrico",
       "Espacio Topológico",
