@@ -64,6 +64,7 @@ function displayQuestion() {
     option.querySelector('label').addEventListener('click', checkAnswer);
     optionsArea.appendChild(option);
   }
+  MathJax.typesetPromise();
 }
 
 function checkAnswer(event) {
@@ -73,12 +74,12 @@ function checkAnswer(event) {
   var currentQuestion = quizQuestions[currentQuestionIndex];
 
   if (selectedAnswerIndex !== null && selectedAnswerIndex === currentQuestion.correctAnswer) {
-      feedbackArea.textContent = 'Correcto! ' 
+      feedbackArea.textContent = '¡Muy bien! ' + currentQuestion.feedback2 
       score++;
   } else if (selectedAnswerIndex === null && timerValue <= 0) {
-      feedbackArea.textContent = 'Time Out!' + currentQuestion.feedback;
+      feedbackArea.textContent = '!Se acabó el tiempo!' + currentQuestion.feedback;
   } else {
-      feedbackArea.textContent = 'Incorrecto. ' + currentQuestion.feedback;
+      feedbackArea.textContent = '¡Error! ' + currentQuestion.feedback;
   }
   // Disable further interaction with options
   var options = optionsArea.getElementsByClassName('option');
