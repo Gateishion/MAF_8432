@@ -11,18 +11,6 @@ const eq9 = '$$\\partial\\ A := \\{ x \\in\\ X \\, | \\, \\text{ es un punto fro
 const eq10 = '$$\\text{Para todo } n \\in\\ \\text{ℕ} \\text{ y } A \\subset\\ \\text{ℝ}^{n} \\text{ con la topología Euclideana. }$$';
 const eq11 = '$$A \\text{ es compacto si y sólo si, } A \\text{ es cerrado y acotado.}$$'
 var quizQuestions = [
-  {
-    question: "El siguiente teorema:  "+eq10+" "+eq11+" corresponde a:",
-    options: [
-        "Teorema espacio métrico segundo numerable",
-        "Teorema de Heine-Borel",
-        "Teorema continuidad topológica",
-        "Teorema continuidad en espacios métricos"
-    ],
-    correctAnswer: 1,
-    feedback2: " El teorema de Heine-Borel habla de subconjuntos compactos sobre campos reales o complejos",
-    feedback: " Este teorema fue fundamental en el curso de cálculo vectorial (Cálculo 3)"
-  },
     {
       question: " "+eq1+" "+eq2+" ",
       //question:  eq2,
@@ -95,6 +83,18 @@ var quizQuestions = [
     correctAnswer: 1,
     feedback2: " Los espacios métricos son espacios topológicos, aunque no ocurre en sentido contrario",
     feedback: " Lee con cuidado"
+},
+{
+  question: "El siguiente teorema:  "+eq10+" "+eq11+" corresponde a:",
+  options: [
+      "Teorema espacio métrico segundo numerable",
+      "Teorema de Heine-Borel",
+      "Teorema continuidad topológica",
+      "Teorema continuidad en espacios métricos"
+  ],
+  correctAnswer: 1,
+  feedback2: " El teorema de Heine-Borel habla de subconjuntos compactos sobre campos reales o complejos",
+  feedback: " Este teorema fue fundamental en el curso de cálculo vectorial (Cálculo 3)"
 }
 
   ];
