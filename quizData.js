@@ -1,102 +1,112 @@
 // quizData.js
-const eq1 = '$$\\text{Sea }  x_{0} \\in\\ X \\text{ y } r>0. \\text{ Definimos:}$$';
-const eq2 = '$$B(x_{0};r) = \\{ x \\in\\ X \\, | \\, d(x,x_{0}) < r \\}$$';
-const eq3 = '$$B(x_{0};r) = \\{ x \\in\\ X \\, | \\, d(x,x_{0}) \\leq\\ r \\}$$';
-const eq4 = '$$B(x_{0};r) = \\{ x \\in\\ X \\, | \\, d(x,x_{0}) = r \\}$$';
-const eq5 = '$$\\text{Sea }  A \\subset\\ X \\text{ y } x \\in\\ X, \\text{ tal que }$$';
-const eq6 = '$$B(x; \\epsilon) \\cap\\ A \\neq\\ \\emptyset\\ \\, \\forall\\ \\epsilon\\ >0.$$';
-const eq7 = '$$\\text{ Entonces se dice que } x$$';
-const eq8 = '$$\\text{Sea }  A \\subset\\ X. \\text{ La siguiente definición corresponde a }$$';
-const eq9 = '$$\\partial\\ A := \\{ x \\in\\ X \\, | \\, \\text{ es un punto frontera de } A \\}$$';
-const eq10 = '$$\\text{Para todo } n \\in\\ \\text{ℕ} \\text{ y } A \\subset\\ \\text{ℝ}^{n} \\text{ con la topología Euclideana. }$$';
-const eq11 = '$$A \\text{ es compacto si y sólo si, } A \\text{ es cerrado y acotado.}$$'
+const eq1 = '$$\\text{Una sucesión }  (x_{n}) \\text{ en un espacio métrico } (X,d)$$';
+const eq2 = '$$ \\text{ ____ o es ____ a } x \\in\\ X \\text{ si } $$';
+const eq3 = '$$\\lim_{n \\to\\ \\infty} d(x_n, x) = 0$$';
+const eq4 = '$$\\text{Sea } (X, || \\, ||) \\text{ un espacio normado con campo } K. $$';
+const eq5 = '$$\\text{¿Cómo se le llama a la siguiente propiedad:} $$';
+const eq6 = '$$||x||>0 \\text{ y } ||x||=0 \\iff\\ x=0 \\text{?}$$';
+const eq7 = '$$||\\lambda\\ x||= |\\lambda| ||x|| \\, \\forall\\ x \\in\\ X \\text{ y } \\lambda\\ \\in\\ K \\text{?}$$';
+const eq8 = '$$||x + y|| \\leq\\ ||x|| + ||y|| \\, \\forall\\ x,y \\in\\ X \\text{?}$$';
+const eq9 = '$$p>1 \\text{ y } 1/p + 1/q =1$$';
+const eq10 = '$$p \\geq\\ 1$$';
+const eq11 = '$$\\sum_{j=1}^{n} |x_j y_j| \\leq\\ \\left( \\sqrt{\\sum_{k=1}^{n} |x_k|^{p} } \\right)^{1/p}  \\left(\\sqrt{\\sum_{m=1}^{n}} |y_m|^{q} \\right)^{1/q} $$';
+const eq12 = '$$\\left( \\sum_{j=1}^{n} |x_j + y_j|^{p}\\right)^{1/p} \\leq\\ \\left( \\sqrt{\\sum_{k=1}^{n} |x_k|^{p} } \\right)^{1/p}  + \\left(\\sqrt{\\sum_{m=1}^{n}} |y_m|^{q} \\right)^{1/q}  $$';
+const eq13 = '$$\\text{ Cada subespacio de dimensión ____ }$$'
+const eq14 = '$$\\text{ de un espacio normado } X \\text{ es completo.}$$'
+const eq15 = '$$\\text{ En particular,  }$$'
+const eq16 = '$$\\text{ cada espacio normado de dimensión ____ es completo.}$$'
+const eq17 = '$$\\text{Sea una sucesión infinita de términos } a_1,a_2,..., $$'
+const eq18 = '$$\\text{ y se define su suma parcial como}$$'
+const eq19 = '$$S_i = \\sum_{n=1}^{i} a_n.$$'
+const eq20 = '$$\\text{Si la suma parcial converge cuando } \\text{i} \\to\\ \\infty\\ \\text{,} $$'
+const eq21 = '$$\\text{entonces se dice que la serie es }$$'
 var quizQuestions = [
     {
-      question: " "+eq1+" "+eq2+" ",
+      question: "Completa: "+eq1+" "+eq2+" "+eq3+" ",
       //question:  eq2,
-        options: ["Como la Bola abierta con centro en x₀ y radio r", "Como la Bola cerrada con centro en x₀ y radio r", "Como la Esfera con centro en x₀ y radio r", "Como el conjunto vacío ∅"],
-        correctAnswer: 0,
-        feedback2: " Esa es la definición de Bola abierta", 
-        feedback: " Observa bien las desigualdades"
-    },
-    {
-      question: " "+eq1+" "+eq3+" ",
-      //question:  eq2,
-        options: ["Como la Bola abierta con centro en x₀ y radio r", "Como la Bola cerrada con centro en x₀ y radio r", "Como la Esfera con centro en x₀ y radio r", "Como el conjunto vacío ∅"],
+        options: ["Converge, divergente", "Converge, convergente", "Diverge, convergente", "Diverge, divergente"],
         correctAnswer: 1,
-        feedback2: " Esa es la definición de Bola cerrada", 
-        feedback: " Observa bien las desigualdades"
+        feedback2: " Esa es la definición de convergencia", 
+        feedback: " Cuidado con los juegos de palabras"
     },
     {
-      question: " "+eq1+" "+eq4+" ",
+      question: " La sucesión (1/n) sobre X=ℕ es un buen ejemplo de una sucesión divergente. Sin embargo, existe su límite. ¿Qué condición se necesita para que sea convergente? ",
       //question:  eq2,
-        options: ["Como la Bola abierta con centro en x₀ y radio r", "Como la Bola cerrada con centro en x₀ y radio r", "Como la Esfera con centro en x₀ y radio r", "Como el conjunto vacío ∅"],
-        correctAnswer: 2,
-        feedback2: " Esa es la definición de esfera", 
-        feedback: " Observa bien las desigualdades"
+        options: ["Para que sea convergente se necesitaría que el límite esté en X", "La sucesión debe ser de Cauchy en X", "La sucesión si converge", "La sucesión siempre diverge"],
+        correctAnswer: 0,
+        feedback2: " Si el límite está en el espacio, la sucesión es convergente", 
+        feedback: " Cuidado, ¿qué debe cumplir el punto límite?"
     },
     {
-      question: " "+eq5+" "+eq6+" "+eq7+"",
-      options: [
-          "Es un punto frontera o de acumulación de A",
-          "Es la frontera de A",
-          "Es la cerradura de A",
-          "Es un punto interior de A"
-      ],
-      correctAnswer: 0,
-      feedback2: " Es la definición de punto de acumulación",
-      feedback: " :("
+      question: " "+eq4+" "+eq5+" "+eq6+" ",
+      //question:  eq2,
+        options: ["Linealidad", "Positividad semidefinida", "Homogeneidad", "Desigualdad del triángulo"],
+        correctAnswer: 1,
+        feedback2: " La norma por definición debe ser positiva semidefinida", 
+        feedback: " Recuerda las propiedades de la norma"
     },
     {
-      // question: "Definimos una familia de elementos de un conjunto X como todos los elementos tales que: (X_α)_(α ∈ I) con x_α ∈ X la imagen de α ∈ I. En donde I mapea elementos a X. Esto lo vuelve diferente a simplemente tomar un subconjunto de X, dado que",
-      question: " "+eq8+" "+eq9+"",
-      options: [
-          "Punto frontera o de acumulación de A",
-          "La frontera de A",
-          "Es la cerradura de A",
-          "Es un punto interior de A"
-      ],
-      correctAnswer: 1,
-      feedback2: "Es la definición de la frontera de un conjunto",
-      feedback: " :("
+      question: " "+eq4+" "+eq5+" "+eq7+"",
+      options: ["Linealidad", "Positividad semidefinida", "Homogeneidad", "Desigualdad del triángulo"],
+      correctAnswer: 2,
+      feedback2: " La norma por definición debe satisfacer homogeneidad", 
+      feedback: " Recuerda las propiedades de la norma"
     },
-  {
-    question: "Completa la frase: ``Las bolas abiertas son ------------------------- y las bolas cerradas son -------------------''",
+    {
+      question: " "+eq4+" "+eq5+" "+eq8+"",
+      options: ["Linealidad", "Positividad semidefinida", "Homogeneidad", "Desigualdad del triángulo"],
+      correctAnswer: 3,
+      feedback2: " Esta es la desigualdad del triángulo para normas", 
+      feedback: " Recuerda las propiedades de la norma"
+    },
+  { 
+    question: "¿Qué condición adicional hay que satisfacer para que un espacio normado sea un espacio de Banach?",
     options: [
-        "Intervalos",
-        "Conjuntos abiertos y conjuntos cerrados",
-        "Bolas semi abiertas y semi cerradas",
-        "Bases de vecindades"
+        "Que el espacio sea completo",
+        "Que el espacio sea compacto",
+        "Que el espacio sea métrico y topológico",
+        "Que toda sucesión sea Cauchy sea divergente"
     ],
-    correctAnswer: 1,
-    feedback2: " Las bolas heredan propiedades topológicas",
-    feedback: " Lee con cuidado"
+    correctAnswer: 0,
+    feedback2: " Es de Banach",
+    feedback: " Revise la definición de espacio de Banach"
 },
 {
-    question: "Completa la frase: ``Todos los espacios métricos son --------------, la -------- define la noción de ---------, pero no todos los espacios topológicos son métricos.",
+    question: "Para "+eq9+" se cumple: "+eq11+" y para "+eq10+" se cumple: "+eq12+" ¿Qué nombre reciben estas desigualdades?",
     options: [
-        "normados, norma, vector",
-        "topológicos, métrica, abierto",
-        "vectoriales, topología, intervalo",
-        "topológicos, métrica, ángulo"
+        "Desigualdad de Hölder y Minkowski",
+        "Desigualdad de Hölder y Cauchy-Schwarz",
+        "Desigualdad de Minkowski y Cauchy-Schwarz",
+        "Desiguadad del triangulo generalizada y Cauchy-Schwarz lp"
     ],
-    correctAnswer: 1,
-    feedback2: " Los espacios métricos son espacios topológicos, aunque no ocurre en sentido contrario",
-    feedback: " Lee con cuidado"
+    correctAnswer: 0,
+    feedback2: " Son esas",
+    feedback: " Revisa la tarea"
 },
 {
-  question: "El siguiente teorema:  "+eq10+" "+eq11+" corresponde a:",
+  question: "Completa: "+eq13+" "+eq14+" "+eq15+" "+eq16+"",
   options: [
-      "Teorema espacio métrico segundo numerable",
-      "Teorema de Heine-Borel",
-      "Teorema continuidad topológica",
-      "Teorema continuidad en espacios métricos"
+      "finita, finita",
+      "infinita, finita",
+      "infinita, infinita",
+      "finita, infinita"
   ],
-  correctAnswer: 1,
+  correctAnswer: 0,
   feedback2: " El teorema de Heine-Borel habla de subconjuntos compactos sobre campos reales o complejos",
   feedback: " Este teorema fue fundamental en el curso de cálculo vectorial (Cálculo 3)"
+},
+{
+  question: " "+eq17+" "+eq18+" "+eq19+" "+eq20+" "+eq21+" ",
+  options: [
+      "Convergente y debe cumplir el criterio de Cauchy",
+      "Convergente y debe cumplir el criterio de la raíz",
+      "Divergente y debe cumplir el criterio de Cauchy",
+      "No nos dice nada acerca de la convergencia o divergencia de la serie"
+  ],
+  correctAnswer: 0,
+  feedback2: " La serie tiende a cierto límite pero debe cumplir el criterio de la Cauchy",
+  feedback: " Revisa los criterios de convergencia"
 }
-
   ];
  
 
