@@ -92,8 +92,8 @@ var quizQuestions = [
       "finita, infinita"
   ],
   correctAnswer: 0,
-  feedback2: " El teorema de Heine-Borel habla de subconjuntos compactos sobre campos reales o complejos",
-  feedback: " Este teorema fue fundamental en el curso de cálculo vectorial (Cálculo 3)"
+  feedback2: " Un espacio normado de dimensión finita es completo",
+  feedback: " Lee con cuidado"
 },
 {
   question: " "+eq17+" "+eq18+" "+eq19+" "+eq20+" "+eq21+" ",
