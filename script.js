@@ -26,7 +26,7 @@ function startTimer() {
 
 // Function to update the timer value and check for timeout
 function updateTimer() {
-  timerValue -= 0.1;
+  timerValue -= 0.02;
   var progressPercentage = (timerValue / 10) * 100;
   progressBar.style.width = progressPercentage + '%';
 
@@ -77,7 +77,7 @@ function checkAnswer(event) {
       feedbackArea.textContent = '¡Muy bien! ' + currentQuestion.feedback2 
       score++;
   } else if (selectedAnswerIndex === null && timerValue <= 0) {
-      feedbackArea.textContent = '!Se acabó el tiempo!' + currentQuestion.feedback;
+      feedbackArea.textContent = '!Se acabó el tiempo! ' + currentQuestion.feedback;
   } else {
       feedbackArea.textContent = '¡Error! ' + currentQuestion.feedback;
   }
