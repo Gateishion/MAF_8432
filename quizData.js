@@ -1,111 +1,108 @@
 // quizData.js
+const q1_text1 = "La siguiente serie es una aproximación de funciones mediante una serie de potencias o suma de potencias enteras de polinomios de tipo ";
+const q1_eq1 = "$$( x - a ) ^n.$$";
+const q1_text2 = "Dicha suma se calcula a partir de las derivadas de la función para un determinado valor. Esta serie es ";
+const q1_eq2 = "$$C^{\\infty}$$";
+const q1_text3 = " o infinitamente derivable: ";
+const q1_eq3 = "$$f(a) + \\frac{f'(a)}{1!}(x-a) + \\frac{f''(a)}{2!}(x-a)^2 + ... + \\frac{f(n)(a)}{n!}(x-a)^n +$$";
+const q2_text1 = "Si en la serie anterior de una función real o compleja ";
+const q2_eq1 = "f(x)";
+const q2_text2 = " alrededor de cierto número ";
+const q2_eq2 = "a";
+const q2_text3 = " ¿qué ocurre si ";
+const q2_eq3 = "a = 0 ?";
+const q3_text1 = "La serie de Laurent es muy útil para investigar el comportamiento de funciones cerca de singularidades o puntos ordinarios. ¿Qué tipo de singularidades pueden encontrarse?";
+const q4_text1 = "Para una serie de Laurent ¿qué ocurre si la serie no tiene potencias negativas?";
+const q5_text1 = "Para una serie de Laurent ¿qué ocurre si la serie tiene una cantidad finita de potencias negativas?";
+const q6_text1 = "Para una serie de Laurent ¿Qué ocurre si la serie tiene infinitas potencias negativas?";
 const eq1 = '$$\\text{Una sucesión }  (x_{n}) \\text{ en un espacio métrico } (X,d)$$';
-const eq2 = '$$ \\text{ ____ o es ____ a } x \\in\\ X \\text{ si } $$';
-const eq3 = '$$\\lim_{n \\to\\ \\infty} d(x_n, x) = 0$$';
-const eq4 = '$$\\text{Sea } (X, || \\, ||) \\text{ un espacio normado con campo } K. $$';
-const eq5 = '$$\\text{¿Cómo se le llama a la siguiente propiedad:} $$';
-const eq6 = '$$||x||>0 \\text{ y } ||x||=0 \\iff\\ x=0 \\text{?}$$';
-const eq7 = '$$||\\lambda\\ x||= |\\lambda| ||x|| \\, \\forall\\ x \\in\\ X \\text{ y } \\lambda\\ \\in\\ K \\text{?}$$';
-const eq8 = '$$||x + y|| \\leq\\ ||x|| + ||y|| \\, \\forall\\ x,y \\in\\ X \\text{?}$$';
-const eq9 = '$$p>1 \\text{ y } 1/p + 1/q =1$$';
-const eq10 = '$$p \\geq\\ 1$$';
-const eq11 = '$$\\sum_{j=1}^{n} |x_j y_j| \\leq\\ \\left( \\sqrt{\\sum_{k=1}^{n} |x_k|^{p} } \\right)^{1/p}  \\left(\\sqrt{\\sum_{m=1}^{n}} |y_m|^{q} \\right)^{1/q} $$';
-const eq12 = '$$\\left( \\sum_{j=1}^{n} |x_j + y_j|^{p}\\right)^{1/p} \\leq\\ \\left( \\sqrt{\\sum_{k=1}^{n} |x_k|^{p} } \\right)^{1/p}  + \\left(\\sqrt{\\sum_{m=1}^{n}} |y_m|^{q} \\right)^{1/q}  $$';
-const eq13 = '$$\\text{ Cada subespacio de dimensión ____ }$$'
-const eq14 = '$$\\text{ de un espacio normado } X \\text{ es completo.}$$'
-const eq15 = '$$\\text{ En particular,  }$$'
-const eq16 = '$$\\text{ cada espacio normado de dimensión ____ es completo.}$$'
-const eq17 = '$$\\text{Sea una sucesión infinita de términos } a_1,a_2,..., $$'
-const eq18 = '$$\\text{ y se define su suma parcial como}$$'
-const eq19 = '$$S_i = \\sum_{n=1}^{i} a_n.$$'
-const eq20 = '$$\\text{Si la suma parcial converge cuando } \\text{i} \\to\\ \\infty\\ \\text{,} $$'
-const eq21 = '$$\\text{entonces se dice que la serie es }$$'
+const q7_text1 = "Completa la frase: ``Un _____ $$T: D(T) \\subset\\ X \\to\\ Y$$ es ____ si existe $$M \\geq\\ 0$$ tal que ";
+const q7_text2 = "$$||T x ||_{Y} \\leq\\ M ||x||_{X}, \\forall\\ x \\in\\ D(T)$$";
 var quizQuestions = [
     {
-      question: "Completa: "+eq1+" "+eq2+" "+eq3+" ",
-      //question:  eq2,
-        options: ["Converge, divergente", "Converge, convergente", "Diverge, convergente", "Diverge, divergente"],
-        correctAnswer: 1,
-        feedback2: " Esa es la definición de convergencia", 
-        feedback: " Cuidado con los juegos de palabras"
-    },
-    {
-      question: " La sucesión (1/n) sobre X=ℕ es un buen ejemplo de una sucesión divergente. Sin embargo, existe su límite. ¿Qué condición se necesita para que sea convergente? ",
-      //question:  eq2,
-        options: ["Para que sea convergente se necesitaría que el límite esté en X", "La sucesión debe ser de Cauchy en X", "La sucesión si converge", "La sucesión siempre diverge"],
+
+      question: q1_text1 + q1_eq1 + q1_text2 + q1_eq2 + q1_text3 + q1_eq3,
+      options: [
+          "Serie de Taylor",
+          "Serie de Maclaurin",
+          "Serie hipergeométrica",
+          "Serie de Laurent"
+      ],
         correctAnswer: 0,
-        feedback2: " Si el límite está en el espacio, la sucesión es convergente", 
-        feedback: " Cuidado, ¿qué debe cumplir el punto límite?"
+        feedback2: "  ", 
+        feedback: "  "
     },
     {
-      question: " "+eq4+" "+eq5+" "+eq6+" ",
-      //question:  eq2,
-        options: ["Linealidad", "Positividad semidefinida", "Homogeneidad", "Desigualdad del triángulo"],
+      question: q2_text1 + q2_eq1 + q2_text2 + q2_eq2 + q2_text3 + q2_eq3,
+      options: [
+          "Se convierte en una serie de Taylor en forma integral",
+          "Se convierte en una serie de Maclaurin",
+          "No ocurre nada",
+          "Se convierte en una serie de Laurent"
+      ],
         correctAnswer: 1,
-        feedback2: " La norma por definición debe ser positiva semidefinida", 
-        feedback: " Recuerda las propiedades de la norma"
+        feedback2: " ", 
+        feedback: " "
     },
     {
-      question: " "+eq4+" "+eq5+" "+eq7+"",
-      options: ["Linealidad", "Positividad semidefinida", "Homogeneidad", "Desigualdad del triángulo"],
-      correctAnswer: 2,
-      feedback2: " La norma por definición debe satisfacer homogeneidad", 
-      feedback: " Recuerda las propiedades de la norma"
+      question: q3_text1,
+      options: [
+          "Puntos ordinarios",
+          "Singularidades regulares y esenciales",
+          "Singularidades ordinarias",
+          "Singularidades propias e impropias"
+      ],
+        correctAnswer: 1,
+        feedback2: " ", 
+        feedback: " "
     },
     {
-      question: " "+eq4+" "+eq5+" "+eq8+"",
-      options: ["Linealidad", "Positividad semidefinida", "Homogeneidad", "Desigualdad del triángulo"],
-      correctAnswer: 3,
-      feedback2: " Esta es la desigualdad del triángulo para normas", 
-      feedback: " Recuerda las propiedades de la norma"
+      question: q4_text1,
+      options: [
+          "La singularidad es evitable o regular",
+          "La singularidad es un polo",
+          "La singularidad es una singularidad esencial",
+          "Ninguna de las anteriores"
+      ],
+      correctAnswer: 0,
+      feedback2: " ", 
+      feedback: " "
+    },
+    {
+      question: q5_text1,
+      options: [
+          "La singularidad es evitable o regular",
+          "La singularidad es un polo",
+          "La singularidad es una singularidad esencial",
+          "Ninguna de las anteriores"
+      ],
+      correctAnswer: 1,
+      feedback2: " ", 
+      feedback: " "
     },
   { 
-    question: "¿Qué condición adicional hay que satisfacer para que un espacio normado sea un espacio de Banach?",
+    question: q6_text1,
     options: [
-        "Que el espacio sea completo",
-        "Que el espacio sea compacto",
-        "Que el espacio sea métrico y topológico",
-        "Que toda sucesión sea Cauchy sea divergente"
+        "La singularidad es evitable o regular",
+        "La singularidad es un polo",
+        "La singularidad es una singularidad esencial",
+        "Ninguna de las anteriores"
     ],
-    correctAnswer: 0,
-    feedback2: " Es de Banach",
-    feedback: " Revise la definición de espacio de Banach"
+    correctAnswer: 2,
+    feedback2: " ",
+    feedback: " "
 },
 {
-    question: "Para "+eq9+" se cumple: "+eq11+" y para "+eq10+" se cumple: "+eq12+" ¿Qué nombre reciben estas desigualdades?",
-    options: [
-        "Desigualdad de Hölder y Minkowski",
-        "Desigualdad de Hölder y Cauchy-Schwarz",
-        "Desigualdad de Minkowski y Cauchy-Schwarz",
-        "Desiguadad del triangulo generalizada y Cauchy-Schwarz lp"
-    ],
-    correctAnswer: 0,
-    feedback2: " Son esas",
-    feedback: " Revisa la tarea"
-},
-{
-  question: "Completa: "+eq13+" "+eq14+" "+eq15+" "+eq16+"",
+  question: q7_text1 + q7_text2,
   options: [
-      "finita, finita",
-      "infinita, finita",
-      "infinita, infinita",
-      "finita, infinita"
+      "Operador lineal, acotado",
+      "Operador diferencial, lineal",
+      "Sistema de operadores, lineal",
+      "Operador integral, acotado"
   ],
   correctAnswer: 0,
-  feedback2: " Un espacio normado de dimensión finita es completo",
-  feedback: " Lee con cuidado"
-},
-{
-  question: " "+eq17+" "+eq18+" "+eq19+" "+eq20+" "+eq21+" ",
-  options: [
-      "Convergente y debe cumplir el criterio de Cauchy",
-      "Convergente y debe cumplir el criterio de la raíz",
-      "Divergente y debe cumplir el criterio de Cauchy",
-      "No nos dice nada acerca de la convergencia o divergencia de la serie"
-  ],
-  correctAnswer: 0,
-  feedback2: " La serie tiende a cierto límite pero debe cumplir el criterio de la Cauchy",
-  feedback: " Revisa los criterios de convergencia"
+  feedback2: " ",
+  feedback: " "
 }
   ];
  
